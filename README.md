@@ -2,7 +2,7 @@ TimeZoneDb
 ==========
 
 **Description:**
-Provides load, storage, and lookup of Time Zones.
+A Time Zone Database for .net which uses real time IANA and CLDR data repositories as its data sources. Provides historical and current time zone data including mappings from IANA Time Zone Ids to Microsoft Time Zones Ids.
 
 **Installation:**
 The easiest way to install is by using [Nuget](http://nuget.org/packages/TimeZoneDb/)
