@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeZoneDb", "TimeZoneDb\TimeZoneDb.csproj", "{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A86D5C3C-98B2-4AAD-A1CB-C2146C40045B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.QA|Any CPU.Build.0 = Release|Any CPU
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
