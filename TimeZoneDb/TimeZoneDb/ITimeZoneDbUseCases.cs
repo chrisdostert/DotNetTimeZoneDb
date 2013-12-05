@@ -5,7 +5,7 @@ using TimeZoneDb.TimeZoneDataSource;
 
 namespace TimeZoneDb.UseCases
 {
-    public interface ITimeServiceUseCases
+    public interface ITimeZoneDbUseCases
     {
         #region Methods
 

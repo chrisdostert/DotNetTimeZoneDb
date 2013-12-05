@@ -118,8 +118,8 @@
     <Compile Include="TimeZoneDataSource\Iana\Etl\TzDbTypes\TzDbZoneDescription.cs" />
     <Compile Include="TimeZoneDataSource\Iana\IanaTimeZoneDataSource.cs" />
     <Compile Include="TimeZoneDataSource\ITimeZoneDataSource.cs" />
-    <Compile Include="UseCases\ITimeServiceUseCases.cs" />
-    <Compile Include="UseCases\TimeServiceUseCases.cs" />
+    <Compile Include="ITimeZoneDbUseCases.cs" />
+    <Compile Include="TimeZoneDbUseCases.cs" />
     <Compile Include="ValueObjects\AbstractTime.cs" />
     <Compile Include="ValueObjects\Date.cs" />
     <Compile Include="ValueObjects\Interval.cs" />

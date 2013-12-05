@@ -7,7 +7,7 @@ using TimeZoneDb.TimeZoneDataSource.Iana;
 
 namespace TimeZoneDb.UseCases
 {
-    public class TimeServiceUseCases : ITimeServiceUseCases
+    public class TimeZoneDbUseCases : ITimeZoneDbUseCases
     {
         #region Ctors
 
@@ -23,7 +23,7 @@ namespace TimeZoneDb.UseCases
         /// prior to source at index 1
         /// </param>
         /// <param name="timeZoneRepository"></param>
-        public TimeServiceUseCases(ITimeZoneRepository timeZoneRepository, IDaylightSavingsAdjustmentRepository daylightSavingsAdjustmentRepository = null, List<ITimeZoneDataSource> timeZoneDataSources = null)
+        public TimeZoneDbUseCases(ITimeZoneRepository timeZoneRepository = null, IDaylightSavingsAdjustmentRepository daylightSavingsAdjustmentRepository = null, List<ITimeZoneDataSource> timeZoneDataSources = null)
         {
             _timeZoneRepository = timeZoneRepository ?? new InMemoryTimeZoneRepository();
             _daylightSavingsAdjustmentRepository = daylightSavingsAdjustmentRepository ?? new InMemoryDaylightSavingsAdjustmentRepository();
