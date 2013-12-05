@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TimeZoneDb")]
-[assembly: AssemblyDescription("A Time Zone Database for .net which uses real time IANA and CLDR data repositories as its data sources. Provides historical and current time zone data including mappings from IANA Time Zone Ids to Microsoft time zones names.")]
+[assembly: AssemblyDescription("A Time Zone Database for .net which uses real time IANA and CLDR data repositories as its data sources. Provides historical and current time zone data including mappings from IANA Time Zone Ids to Microsoft Time Zones Ids.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("appease")]
 [assembly: AssemblyProduct("TimeZoneDb")]
