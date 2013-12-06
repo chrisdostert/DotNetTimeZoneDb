@@ -6,6 +6,7 @@
     <owners />
     <id>$id$</id>
     <title />
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <projectUrl>https://github.com/appease/TimeZoneDb</projectUrl>
