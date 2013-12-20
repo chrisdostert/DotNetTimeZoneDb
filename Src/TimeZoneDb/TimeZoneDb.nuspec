@@ -9,6 +9,7 @@
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
+    <tags>TimeZones RealTime MicrosoftTimeZoneId IANATimeZoneId TimeZoneData Time Zone TimeZoneDB OlsonDatabase TZDB IANA CLDR </tags>
     <projectUrl>https://github.com/appease/TimeZoneDb</projectUrl>
   </metadata>
   <files />
