@@ -8,7 +8,7 @@ A Time Zone Database for .net which uses real time IANA and CLDR data repositori
 The easiest way to install is by using [Nuget](http://nuget.org/packages/TimeZoneDb/)
 
 **Documentation:** 
-Documentation is available via the [Wiki](https://github.com/AutoMapper/AutoMapper/wiki)
+Documentation is available via the [Wiki](https://github.com/appease/TimeZoneDb/wiki)
 
 **Quickstart:**
 
