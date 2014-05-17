@@ -19,7 +19,7 @@ Documentation is available via the [Wiki](https://github.com/appease/TimeZoneDb/
 var timeZoneDbUseCases = new TimeZoneDbUseCases();
 
 // get all time zones
-var allTimeZones = timeZoneDbUseCases = timeZoneDbUseCases.GetAllTimeZones();
+var allTimeZones = timeZoneDbUseCases.GetAllTimeZones();
 
 // get a specific time zone by its IANA time zone id
 var timeZone = timeZoneDbUseCases.GetTimeZoneWithIanaId("America/Los_Angeles");
