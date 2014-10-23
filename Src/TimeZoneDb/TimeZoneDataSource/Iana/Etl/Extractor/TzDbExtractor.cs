@@ -55,7 +55,13 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor
                 "solar88",
                 "solar89",
                 "systemv",
-                "yearistype.sh"
+                "yearistype.sh",
+                "CONTRIBUTING",
+                "NEWS",
+                "Theory",
+                "checktab.awk",
+                "zone1970.tab",
+                "zoneinfo2tdf.pl"
             };
 
             foreach (IFileInfo file in _fileSource)
