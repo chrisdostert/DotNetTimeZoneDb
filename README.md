@@ -1,9 +1,9 @@
-**Installation:**
+### How do i install it?
 The easiest way to install is by using [NuGet](http://nuget.org/packages/timezonedb).
 
-**Documentation**
-see the [wiki](https://github.com/appease/timezonedb/wiki) for available documentation.
+###Wheres the documentation?
+see the [wiki](https://github.com/Appease/Appease.TimeZoneDb/wiki) for available documentation.
 
-**Build Status:**
-[![Build status](https://ci.appveyor.com/api/projects/status/smxulnmw3t9jc671)](https://ci.appveyor.com/project/TonightWe/timezonedb)
+###What's the build status?
+![](https://ci.appveyor.com/api/projects/status/uga7nf3485fxx6oy?svg=true)
 
