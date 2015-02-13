@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeZoneDb", "TimeZoneDb\TimeZoneDb.csproj", "{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appease.TimeZoneDb", "TimeZoneDb\Appease.TimeZoneDb.csproj", "{704D4F91-2DEB-4BF8-87C9-3B380DEE468A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A86D5C3C-98B2-4AAD-A1CB-C2146C40045B}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A86D5C
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeZoneDb.Tests", "TimeZoneDb.Tests\TimeZoneDb.Tests.csproj", "{040F2C32-513F-46F5-9F47-113181D9DF7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appease.TimeZoneDb.Tests", "TimeZoneDb.Tests\Appease.TimeZoneDb.Tests.csproj", "{040F2C32-513F-46F5-9F47-113181D9DF7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

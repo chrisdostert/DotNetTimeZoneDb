@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TimeZoneDb\TimeZoneDb.csproj">
+    <ProjectReference Include="..\TimeZoneDb\Appease.TimeZoneDb.csproj">
       <Project>{704d4f91-2deb-4bf8-87c9-3b380dee468a}</Project>
-      <Name>TimeZoneDb</Name>
+      <Name>Appease.TimeZoneDb</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

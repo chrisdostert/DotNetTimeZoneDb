@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.Database;
 using TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.FileSource;
 using TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.Parser;
@@ -41,38 +42,40 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor
             // start with a clean slate (in case this is an update rather than an initial extraction)
             _extractorDatabase.DropAndReCreate();
 
-            // a list of files this extraction doesnt care about
-            var ignoreList = new List<String>
+            // a list of files which contain data
+            // see ftp://ftp.iana.org/tz/code/Makefile
+            var dataFileNameList = new []
             {
-                "factory",
-                "iso3166.tab",
-                "leapseconds",
-                "leapseconds.awk",
-                "leap-seconds.list",
-                "Makefile",
-                "README",
-                "solar87",
-                "solar88",
-                "solar89",
-                "systemv",
-                "yearistype.sh",
-                "CONTRIBUTING",
-                "NEWS",
-                "Theory",
-                "checktab.awk",
-                "zone1970.tab",
-                "zoneinfo2tdf.pl"
+                // YDATA
+                "africa",
+                "antarctica",
+                "asia",
+                "australasia",
+                "europe",
+                "northamerica",
+                "southamerica",
+                "pacificnew",
+                "etcetera",
+                "backward",
+                // TABDATA
+                "zone.tab",
+                // OTHER
+                "backzone"
             };
 
-            foreach (IFileInfo file in _fileSource)
+            foreach (var dataFileName in dataFileNameList)
             {
-                // Performance enhancement: ignore files that aren't relevant
-                if (ignoreList.Contains(file.Name))
-                {
-                    continue;
-                }
+                var dataFile =
+                    _fileSource.SingleOrDefault(
+                        file =>
+                            file.Name.Equals(
+                                dataFileName,
+                                StringComparison.InvariantCultureIgnoreCase));
 
-                _parser.Parse(file, _extractorDatabase);
+                if (null != dataFile)
+                {
+                    _parser.Parse(dataFile,_extractorDatabase);
+                }
             }
 
             return new ExtractorDatabaseReader(_extractorDatabase);

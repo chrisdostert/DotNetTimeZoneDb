@@ -14,9 +14,9 @@ namespace TimeZoneDb.TimeZoneDataSource.Cldr
     {
         #region Ctors
 
-        public CldrTimeZoneDataSource(ITZMapper tzMapper = null)
+        public CldrTimeZoneDataSource()
         {
-            _tzMapper = tzMapper ?? TimeZoneMap.OnlineWithFallbackValuesTZMapper;
+            _tzMapper = TimeZoneMap.OnlineWithFallbackValuesTZMapper;
         }
 
         #endregion
