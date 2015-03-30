@@ -10,7 +10,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <tags>TimeZones RealTime MicrosoftTimeZoneId IANATimeZoneId TimeZoneData TZ Time Zone TimeZoneDB OlsonDatabase TZDB IANA CLDR </tags>
-    <projectUrl>https://github.com/Appease/Appease.TimeZoneDb</projectUrl>
+    <projectUrl>https://github.com/chrisdostert/TimeZoneDb</projectUrl>
     <iconUrl>http://res.cloudinary.com/hibczhd9m/image/upload/c_crop,w_350/v1423785217/NuGet.org/5711875.png</iconUrl>
   </metadata>
   <files />
