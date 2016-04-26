@@ -11,9 +11,19 @@ namespace TimeZoneDb.Tests.Integration
     {
         #region Fields
 
-        private ITimeZoneDbUseCases _timeZoneDbUseCases = new TimeZoneDbUseCases();
+        private static ITimeZoneDbUseCases _timeZoneDbUseCases;
 
         #endregion
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            // this became static because instantiating this thing takes ages
+            if (_timeZoneDbUseCases == null)
+            {
+                _timeZoneDbUseCases = new TimeZoneDbUseCases();
+            }
+        }
 
         [TestMethod]
         public void GetAllTimeZones()
@@ -27,6 +37,13 @@ namespace TimeZoneDb.Tests.Integration
         public void GetTimeZoneWithIanaId()
         {
             var timeZone = _timeZoneDbUseCases.GetTimeZoneWithIanaId("America/Los_Angeles");
+            Assert.IsNotNull(timeZone);
+        }
+
+        [TestMethod]
+        public void GetTimeZoneWithIanaId_WrongCaseResolves()
+        {
+            var timeZone = _timeZoneDbUseCases.GetTimeZoneWithIanaId("america/los_angeles");
             Assert.IsNotNull(timeZone);
         }
     }
