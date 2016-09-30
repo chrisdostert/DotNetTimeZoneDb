@@ -32,12 +32,17 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.FileSource
 
         public IEnumerator<IFileInfo> GetEnumerator()
         {
-            var request = (FtpWebRequest) WebRequest.Create(_ftpFileDirectoryUri);
+            return GetFileInfos().GetEnumerator();
+        }
+
+        public IList<IFileInfo> GetFileInfos()
+        {
+            var request = (FtpWebRequest)WebRequest.Create(_ftpFileDirectoryUri);
             request.Method = WebRequestMethods.Ftp.ListDirectory;
 
             request.Credentials = _networkCredential;
 
-            var response = (FtpWebResponse) request.GetResponse();
+            var response = (FtpWebResponse)request.GetResponse();
             Stream responseStream = response.GetResponseStream();
             var streamReader = new StreamReader(responseStream);
 
@@ -53,7 +58,8 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.FileSource
 
                 fileInfoList.Add(fileInfo);
             }
-            return fileInfoList.GetEnumerator();
+
+            return fileInfoList;
         }
 
         IEnumerator IEnumerable.GetEnumerator()

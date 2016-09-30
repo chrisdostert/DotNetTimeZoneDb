@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.FileSource
 {
@@ -30,7 +31,7 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.FileSource
         {
             get { return new StreamReader(_fileInfo.OpenRead()); }
         }
-
+ 
         #endregion
     }
 }

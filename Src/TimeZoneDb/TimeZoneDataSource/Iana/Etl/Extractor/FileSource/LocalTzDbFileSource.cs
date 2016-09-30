@@ -28,13 +28,18 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.FileSource
 
         public IEnumerator<IFileInfo> GetEnumerator()
         {
+            return GetFileInfos().GetEnumerator();
+        }
+
+        public IList<IFileInfo> GetFileInfos()
+        {
             IEnumerable<FileInfo> fileInfos = _directoryInfo.EnumerateFiles();
             var localFileinfos = new List<IFileInfo>();
             foreach (FileInfo fileInfo in fileInfos)
             {
                 localFileinfos.Add(new LocalFileInfo(fileInfo));
             }
-            return localFileinfos.GetEnumerator();
+            return localFileinfos;
         }
 
         IEnumerator IEnumerable.GetEnumerator()

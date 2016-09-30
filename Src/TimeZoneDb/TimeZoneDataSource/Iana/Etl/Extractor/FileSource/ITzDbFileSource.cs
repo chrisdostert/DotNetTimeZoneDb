@@ -4,5 +4,6 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor.FileSource
 {
     public interface ITzDbFileSource : IEnumerable<IFileInfo>
     {
+        IList<IFileInfo> GetFileInfos();
     }
 }

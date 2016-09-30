@@ -65,6 +65,8 @@
     <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\Database\IExtractorDatabase.cs" />
     <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\Database\IExtractorDatabaseReader.cs" />
     <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\Database\InMemoryExtractorDatabase.cs" />
+    <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\FileSource\EmbeddedResourceFileInfo.cs" />
+    <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\FileSource\EmbeddedResourcesTzDbSource.cs" />
     <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\FileSource\FtpFileInfo.cs" />
     <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\FileSource\FtpTzDbFileSource.cs" />
     <Compile Include="TimeZoneDataSource\Iana\Etl\Extractor\FileSource\IFileInfo.cs" />
@@ -146,8 +148,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\africa" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\antarctica" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\asia" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\australasia" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\backward" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\backzone" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\etcetera" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\europe" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\northamerica" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\pacificnew" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\southamerica" />
+    <EmbeddedResource Include="TimeZoneDataSource\tzdatabase\zone.tab" />
     <None Include="TimeZoneDb.nuspec" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
