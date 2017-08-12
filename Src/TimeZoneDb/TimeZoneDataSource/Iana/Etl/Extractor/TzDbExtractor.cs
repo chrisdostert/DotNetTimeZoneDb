@@ -32,6 +32,7 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor
 
         private readonly ITzDbFileSource _fileSource;
         private readonly ITzDbParser _parser;
+        private readonly EmbeddedResourcesTzDbSource _fallBackDbSource = new EmbeddedResourcesTzDbSource();
 
         #endregion
 
@@ -63,10 +64,20 @@ namespace TimeZoneDb.TimeZoneDataSource.Iana.Etl.Extractor
                 "backzone"
             };
 
+            IList<IFileInfo> fileInfos;
+            try
+            {
+                fileInfos = _fileSource.GetFileInfos();
+            }
+            catch (Exception)
+            {
+                fileInfos = _fallBackDbSource.GetFileInfos();
+            }
+          
             foreach (var dataFileName in dataFileNameList)
             {
                 var dataFile =
-                    _fileSource.SingleOrDefault(
+                    fileInfos.SingleOrDefault(
                         file =>
                             file.Name.Equals(
                                 dataFileName,
