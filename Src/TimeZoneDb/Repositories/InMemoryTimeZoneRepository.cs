@@ -11,7 +11,7 @@ namespace TimeZoneDb.Repositories
 
         public InMemoryTimeZoneRepository()
         {
-            _timeZoneDatabase = new ConcurrentDictionary<string, DbTimeZone>();
+            _timeZoneDatabase = new ConcurrentDictionary<string, DbTimeZone>(StringComparer.OrdinalIgnoreCase);
         }
 
         #endregion
